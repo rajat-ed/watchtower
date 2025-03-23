@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchtower for Exams</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Watchtower for Exams</h1>
+        <h2>Invigilation Duty Generator</h2>
+        
+        <div class="input-section">
+            <h3>Teacher Information</h3>
+            <table id="teacherTable"></table>
+            <button onclick="submitTeacherData()" class="submit-btn">Submit Teacher Data</button>
+
+            <h3>Exam Routine</h3>
+            <table id="examTable"></table>
+            <button onclick="submitExamRoutine()" class="submit-btn">Submit Exam Routine</button>
+            <button onclick="generateSchedule()" class="generate-btn">Generate Schedule</button>
+            <button onclick="clearData()" class="clear-btn">Clear All Data</button>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading Schedule...</p>
+        </div>
+
+        <div id="scheduleOutput" class="output-section"></div>
+
+        <div class="chart-section">
+            <h3>Duty Distribution</h3>
+            <div class="chart-container">
+                <canvas id="chartLowerGrades"></canvas>
+                <canvas id="chartUpperGrades"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Watchtower for Exams | Created by Rajat</div>
+    <script src="script.js"></script>
+</body>
+</html>
