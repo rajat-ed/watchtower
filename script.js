@@ -512,9 +512,9 @@ async function exportToPDF() {
 
     // Header on First Page
     doc.setFontSize(16);
-    doc.text("Watchtower for Exams - Schedule", 10, 10);
+    doc.text("Watchtower for Exams - Invigilation duty", 10, 10);
     doc.setFontSize(12);
-    doc.text("Invigilation Duties", 10, 20);
+    doc.text("www.rajat-ed.github.io/watchtower/", 10, 20);
 
     // Schedule Tables
     let yOffset = 30;
